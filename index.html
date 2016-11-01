@@ -81,7 +81,9 @@ Released   : 20131022
 		</div>
 		<div id="extra" class="container">
 			<h2>網站源起</h2>
-			<span>提供迷惘的研究生，一個選擇論文指導教授解決方案</span> </div>
+			<span>提供迷惘的研究生，一個選擇論文指導教授解決方案</span> 
+			<h3></h3>
+			</div>
 			
 		
 
@@ -92,5 +94,95 @@ Released   : 20131022
 <div id="copyright" class="container">
 	<p>&copy; Untitled. All rights reserved. | Photos by <a href="http://fotogrph.com/">Fotogrph</a> | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
 </div>
+
+<head>
+        <meta charset="utf-8"/>
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+        <title>D3.JS demo</title>
+    </head>
+    <body>
+ <script type="text/javascript">
+     d3.select('body')
+ 
+     var svg = d3.select('body').select('h3').append('svg')
+            .attr("width", 250)
+            .attr("height", 250);
+     svg.append('circle').attr({
+         cx: 60,
+         cy: 60,
+         r: 50
+     }).style({
+         fill: 'black'
+     });
+ 
+     svg.append('circle').attr({
+         cx: 200,
+         cy: 60,
+         r: 50
+     }).style({
+         fill: 'black'
+     });
+ 
+     svg.append('circle').attr({
+         cx: 130,
+         cy: 120,
+         r: 100
+     }).style({
+         fill: 'white'
+     });
+ 
+     svg.append('ellipse').attr(
+     {
+         cx:100,
+         cy:120,
+         rx:50,
+         ry:50
+     }).style({
+         fill: 'black'
+     });
+ 
+     svg.append('ellipse').attr(
+     {
+         cx:160,
+         cy:120,
+         rx:50,
+         ry:50
+     }).style({
+         fill: 'black'
+     });
+ 
+     svg.append('ellipse').attr(
+     {
+         cx:160,
+         cy:120,
+         rx:10,
+         ry:15
+     }).style({
+         fill: 'white'
+     });
+ 
+     svg.append('ellipse').attr(
+     {
+         cx:100,
+         cy:120,
+         rx:10,
+         ry:15
+     }).style({
+         fill: 'white'
+     });
+ 
+     svg.append('ellipse').attr(
+     {
+         cx:130,
+         cy:170,
+         rx:10,
+         ry:7
+     }).style({
+         fill: 'black'
+     });
+ </script>
+    </body>
+</html>
+
 </body>
 </html>
