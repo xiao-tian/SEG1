@@ -44,14 +44,12 @@ d3.csv("./paper.csv", function(data) {
 	attr("class", "pathline").
 	attr("d", lines);
 	
-	ctrl.selectAll("text")
+	ctrl.append("text")
 	.data([data])
-	.enter()
-	.append("text")
 	.attr("x", function(d,i){ return i * (width/ln); })
 	.attr("y", function(d) { return height; })
 	.attr("font-size", "30px")
-	.text(function(d) {return d.total;})
+	.text(function(d) {return d.year;})
 });
 </script>
 </body>
