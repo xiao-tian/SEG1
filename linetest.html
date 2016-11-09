@@ -45,7 +45,7 @@ d3.csv("./paper.csv", function(data) {
 	ctrl.append("path").data([data]).
 	attr("class", "pathline").
 	attr("d", lines);
-	ctrl.append('text').attr('x', function(d,i){ return i * (width/ln); }).attr('y', 0).text(function(d) return d.year);
+	//ctrl.append('text').attr('x', function(d,i){ return i * (width/ln); }).attr('y', 0).text(function(d) return d.year);
 	
 });
 </script>
