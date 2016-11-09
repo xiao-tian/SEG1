@@ -40,7 +40,7 @@ d3.csv("./paper.csv", function(data) {
 	//畫線規則
 	var lines = d3.line().
 	x(function(d,i){ return i * (width/ln); }).
-	y(function(d){ return height-d.total * (height/hmaxy); });
+	y(function(d){ return 500; });
 	//讀取數值畫線
 	ctrl.append("path").data([data]).
 	attr("class", "pathline").
