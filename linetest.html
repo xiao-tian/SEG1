@@ -42,7 +42,7 @@ d3.csv("./paper.csv", function(data) {
 	x(function(d,i){ return i * (width/ln); }).
 	y(function(d){ return height-d.total * (height/hmaxy); });
 	//讀取數值畫線
-	ctrl.append('text').attr('x', function(d,i){ return i * (width/ln); }).attr('y', 0).text(function(d) return d.year);
+	//ctrl.append('text').attr('x', function(d,i){ return i * (width/ln); }).attr('y', 0).text(function(d) return d.year);
 	
 });
 </script>
