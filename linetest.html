@@ -42,8 +42,15 @@ d3.csv("./paper.csv", function(data) {
 	x(function(d,i){ return i * (width/ln); }).
 	y(function(d){ return height-d.total * (height/hmaxy); });
 	//畫數字規則
-	ctrl.append('text').attr('x', 10).attr('y', 20).style('fill', 'steelblue').style('font-size', '24px').style('font-weight', 'bold').text('男丁格爾\'s 脫殼玩');
-	//給數值畫線
+	ctrl.append('text').attr({
+		x: 10, 
+		y: 20
+	}).style({
+		fill: 'red',
+		'font-size': '42px'
+	}).append('textPath').attr({
+		'xlink:href': '#mypath'
+	}).text('男丁格爾\'s 脫殼玩 http://abgne.tw');
 	ctrl.append("path").data([data]).
 	attr("class", "pathline").
 	attr("d", lines);
