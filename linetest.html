@@ -61,7 +61,7 @@ d3.csv("./paper.csv", function(data) {
 	ctrl.append("path").data([data]).
 	attr("class", "pathline")
 	.attr("id","yline")
-	.attr("d", xline);
+	.attr("d", xline1);
 	var yline = d3.line().
 	x(0).
 	y(function(d){ return height-d.total * (height/hmaxy); });
@@ -77,7 +77,7 @@ d3.csv("./paper.csv", function(data) {
 	ctrl.append("path").data([data]).
 	attr("class", "pathline")
 	.attr("id","yline")
-	.attr("d", yline);
+	.attr("d", yline1);
 	//文字規則
 	/*var text = ctrl.selectAll("text")
                         .data([data])
