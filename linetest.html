@@ -51,7 +51,7 @@ d3.csv("./paper.csv", function(data) {
                         .enter()
                         .append("text");
 	var textLabels = text
-                 .attr("x", function(d) { return d.year; })
+                 .attr("x", function(d,i) { return i; })
                  .attr("y", function(d) { return height-d.total * (height/hmaxy); })
                  .text( function (d) { return "( " + d.year + ", " + d.total +" )"; })
                  .attr("font-family", "sans-serif")
