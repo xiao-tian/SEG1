@@ -7,11 +7,11 @@
 	stroke-width: 3;
 	fill: none;
 }
-#pathline2 {
+#xline {
 	stroke: red;
 	
 }
-#pathline3 {
+#yline {
 	stroke: black;
 }
 #pathline4 {
@@ -45,8 +45,25 @@ d3.csv("./paper.csv", function(data) {
 	ctrl.append("path").data([data]).
 	attr("class", "pathline").
 	attr("d", lines);
+	
+	var xline = d3.line().
+	x(function(d,i){ return i * (width/ln); }).
+	y(function(d){ return 0); });
+	//讀取數值畫線
+	ctrl.append("path").data([data]).
+	attr("class", "pathline")
+	.attr("id","yline")
+	.attr("d", xline);
+	var yline = d3.line().
+	x(function(d,i){ return 0; }).
+	y(function(d){ return height-d.total * (height/hmaxy); });
+	//讀取數值畫線
+	ctrl.append("path").data([data]).
+	attr("class", "pathline")
+	.attr("id","yline")
+	.attr("d", yline);
 	//文字規則
-	var text = ctrl.selectAll("text")
+	/*var text = ctrl.selectAll("text")
                         .data([data])
                         .enter()
                         .append("text");
@@ -56,7 +73,7 @@ d3.csv("./paper.csv", function(data) {
                  .text( function (d) { return "( " + d.year + ", " + d.total +" )"; })
                  .attr("font-family", "sans-serif")
                  .attr("font-size", "20px")
-                 .attr("fill", "red");
+                 .attr("fill", "red");*/
 });
 </script>
 </body>
