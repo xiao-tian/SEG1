@@ -51,7 +51,7 @@ d3.csv("./paper.csv", function(data) {
 	.attr("x", function(d,i){ return i * (width/ln); })
 	.attr("y", function(d) { return height; })
 	.attr("font-size", "20px")
-	.text(function(d) {return d.year;})
+	.text(function(d,i) {return i;})
 });
 </script>
 </body>
