@@ -33,7 +33,7 @@ d3.csv("./paper.csv", function(data) {
 		console.log(d.year);
 		console.log(d.total);
 	});
-	/*var hmaxy = d3.max(data, function(d) { return d.total; });
+	var hmaxy = d3.max(data, function(d) { return d.total; });
 	var ln = data.length;
 	var ctrl  = d3.select(".table").append("svg").attr("width", width).attr("height", height);
 	
@@ -42,17 +42,8 @@ d3.csv("./paper.csv", function(data) {
 	y(function(d){ return height-d.total * (height/hmaxy); });
 	ctrl.append("path").data([data]).
 	attr("class", "pathline").
-	attr("d", lines);*/
-	var canvas=d3.select(".table").append("svg").attr("width", width).attr("height", height);
-	canvas.selectAll("rect")
-	.data([data])
-	.enter()
-		.append("rect")
-		.attr("width",function(d){return d.total*10;})
-		.attr("height", 48)
-		.attr("y", function (d,i){return i* 50;})
-		.attr("fill", "blue");
-
+	attr("d", lines);
+	
 });
 </script>
 </body>
