@@ -44,13 +44,17 @@ d3.csv("./paper.csv", function(data) {
 	attr("class", "pathline").
 	attr("d", lines);
 	
-	var itext =d3.text()
-	.x(function(d,i){ return i * (width/ln); })
-	.y(function(d){ return 0});
-	ctrl.append("text")
-	.data([data])
-	.attr("font-size", "30px")
-	.attr("d",itext);
+	var text = ctrl.selectAll("text")
+                       .data([data])
+                       .enter()
+                       .append("text");
+	var textLabels = text
+                 .attr("x", function(d,i) { return i * (width/ln); })
+                 .attr("y", function(d) { return 0; })
+                 .text( function (d) { return d.year; })
+                 .attr("font-family", "sans-serif")
+                 .attr("font-size", "30px")
+                 .attr("fill", "red");
 });
 </script>
 </body>
