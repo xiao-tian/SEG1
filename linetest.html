@@ -48,8 +48,8 @@ d3.csv("./paper.csv", function(data) {
 	.data([data])
 	.enter()
 	.append("text")
-	.attr("x", function(d) { return 50; })
-	.attr("y", function(d) { return 50; })
+	.attr("x", function(d,i){ return i * (width/ln); })
+	.attr("y", function(d) { return height; })
 	
 });
 </script>
