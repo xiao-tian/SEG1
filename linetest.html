@@ -52,7 +52,7 @@ d3.csv("./paper.csv", function(data) {
                         .append("text");
 	var textLabels = text
                  .attr("x", function(d) { return d.year; })
-                 .attr("y", function(d) { return d.total; })
+                 .attr("y", function(d) { return height-d.total * (height/hmaxy); })
                  .text( function (d) { return "( " + d.year + ", " + d.total +" )"; })
                  .attr("font-family", "sans-serif")
                  .attr("font-size", "20px")
