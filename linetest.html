@@ -48,7 +48,7 @@ d3.csv("./paper.csv", function(data) {
 	.enter()
 	.append("text")
 	.attr("fill","blue")
-	.attr("y",function(d,i){ return i * (width/ln);})
+	.attr("x",function(d,i){ return i * (width/ln);})
 	.text(function(d){ return d.year};)
 	
 	
