@@ -70,8 +70,8 @@ d3.csv("./paper.csv", function(data) {
 	attr("class", "pathline")
 	.attr("id","yline")
 	.attr("d", yline);
-	var yline = d3.line().
-	x(height).
+	var yline1 = d3.line().
+	x(width).
 	y(function(d){ return height-d.total * (height/hmaxy); });
 	//讀取數值畫線
 	ctrl.append("path").data([data]).
