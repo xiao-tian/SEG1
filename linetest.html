@@ -45,8 +45,8 @@ d3.csv("./paper.csv", function(data) {
 	attr("d", lines);
 	
 	var itext =d3.text()
-	.attr("x", function(d,i){ return i * (width/ln); })
-	.attr("y", function(d) { return height; })
+	.x(function(d,i){ return i * (width/ln); })
+	.y(function(d){ return 0);
 	ctrl.append("text")
 	.data([data])
 	.attr("font-size", "30px")
