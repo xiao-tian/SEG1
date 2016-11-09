@@ -44,7 +44,7 @@ d3.csv("./paper.csv", function(data) {
 	attr("d", lines);
 	
 	ctrl.selectAll("text")
-	.data(data)
+	.data([data])
 	.enter()
 	.append("text")
 	.attr("fill","blue")
