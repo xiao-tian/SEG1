@@ -27,17 +27,13 @@
 <script type="text/javascript">
 var width  = 1024;
 var height = 768; 
-d3.csv("https://docs.google.com/a/au.edu.tw/spreadsheets/d/1adnQzjzoEyVqejtTZMZi3DnP3dK3XUcAtebS5xGwWyM/edit?usp=sharing", function(data) {
+d3.csv("./paper.csv", function(data) {
 	console.log(data);
 	data.forEach(function(d) {
-		console.log(d.Open);
-		console.log(d.Low);
-		console.log(d.Close);
+		console.log(d.year);
+		console.log(d.total);
 	});
-	var maxy = d3.max(data, function(d) { return d.Open; });
-	var hmaxy = d3.max(data, function(d) { return d.High; });
-	var lmaxy = d3.max(data, function(d) { return d.Low; });
-	var cmaxy = d3.max(data, function(d) { return d.Close; });
+	var hmaxy = d3.max(data, function(d) { return d.total; });
 	var ln = data.length;
 	var ctrl  = d3.select(".table").append("svg").attr("width", width).attr("height", height);
 	var lines = d3.line().
@@ -46,27 +42,7 @@ d3.csv("https://docs.google.com/a/au.edu.tw/spreadsheets/d/1adnQzjzoEyVqejtTZMZi
 	ctrl.append("path").data([data]).
 	attr("class", "pathline").
 	attr("d", lines);
-	var line2 = d3.line().
-	x(function(d,i){ return i * (width/ln); }).
-	y(function(d){ return height-d.High * (height/hmaxy); });
-	ctrl.append("path").data([data]).
-	attr("class", "pathline").
-	attr("id", "pathline2").
-	attr("d", line2);
-    	var line3 = d3.line().
-	x(function(d,i){ return i * (width/ln); }).
-	y(function(d){ return height-d.Low * (height/hmaxy); });
-	ctrl.append("path").data([data]).
-	attr("class", "pathline").
-	attr("id", "pathline3").
-	attr("d", line3);
-	var line4 = d3.line().
-	x(function(d,i){ return i * (width/ln); }).
-	y(function(d){ return height-d.Close * (height/hmaxy); });
-	ctrl.append("path").data([data]).
-	attr("class", "pathline").
-	attr("id", "pathline4").
-	attr("d", line4);
+
 	
 });
 </script>
