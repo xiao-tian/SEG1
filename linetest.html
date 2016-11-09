@@ -42,17 +42,7 @@ d3.csv("./paper.csv", function(data) {
 	x(function(d,i){ return i * (width/ln); }).
 	y(function(d){ return height-d.total * (height/hmaxy); });
 	//讀取數值畫線
-	ctrl.append("path").attr(id: 'mypath').data([data]).
-	attr("class", "pathline").
-	attr("d", lines);
-	//
-	ctrl.append('text').attr({
-		x: 10, 
-		y: 20
-	})
-	}).append('textPath').attr({
-		'xlink:href': '#mypath'
-	}).text('男丁格爾\'s 脫殼玩 http://abgne.tw');
+	ctrl.append('text').attr('x', function(d,i){ return i * (width/ln); }).attr('y', 0).text(function(d) return d.year);
 	
 });
 </script>
