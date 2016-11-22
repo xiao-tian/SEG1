@@ -4,17 +4,11 @@
 <script src="d3.js"></script>
 <script src="d3.layout.cloud.js"></script>
 <script src="d3.wordcloud.js"></script>
+<script src="https://seg1.github.io/SEG1/wctest.js"></script>
 </head>
 <body>
 <div id="wordcloud"></div>
 <script type="text/javascript">
-d3.csv("./wordnews.csv", function(data) {
-	console.log(data);
-	      d3.wordcloud()
-        .size([800, 400])
-        .selector('#wordcloud')
-        .words(data)
-        .start();
-});
+aa002868();
 </script>
 </body>
