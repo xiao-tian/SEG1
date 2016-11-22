@@ -69,27 +69,32 @@ Released   : 20131022
 				<div class="title">
 					<h2><a href="professor.html" accesskey="5" title="">教授論文</a></h2>
 				</div>
-				<p><button type="button" onclick="myFunction()"><font face="標楷體" color="#FF0000" style=font-size:18px>王宏倫</font></button></p>
+				<p><button type="button" onclick="myFunction()"><font face="標楷體" color="#FF0000" style=font-size:18px>王弘倫</font></button></p>
 			</div>
 		</div>
 		
-			<div id="DongYuhYang" style="display: none;">
+			<div id="DongYuhYang">
+				<h1>楊東育</h1>
 			<script>DongYuhYang();</script>
 			</div>	
 		
-			<div id="YiFanWang">
+			<div id="YiFanWang" style="display: none;">
+				<h1>王亦凡</h1>
 			<script>YiFanWang();</script>
 			</div>	
 		
-			<div id="HungLungWang">
+			<div id="HungLungWang" style="display: none;">
+				<h1>王弘倫</h1>
 			<script>HungLungWang();</script>
 			</div>	
 		
-			<div id="JouMingChang">
+			<div id="JouMingChang" style="display: none;">
+				<h1>張肇明</h1>
 			<script>JouMingChang();</script>
 			</div>	
 		
-			<div id="ChingShihTsou">
+			<div id="ChingShihTsou" style="display: none;">
+				<h1>鄒慶士</h1>
 			<script>ChingShihTsou();</script>
 			</div>	
 		
@@ -100,5 +105,49 @@ Released   : 20131022
 <div id="copyright" class="container">
 	<p>&copy; Untitled. All rights reserved. | Photos by <a href="http://fotogrph.com/">Fotogrph</a> | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
 </div>
+	<script type="text/javascript">
+
+function DongYuhYang()
+{
+document.getElementById("DongYuhYang").style.display="";
+document.getElementById("YiFanWang").style.display="none";
+document.getElementById("HungLungWang").style.display="none";
+document.getElementById("JouMingChang").style.display="none";
+document.getElementById("ChingShihTsou").style.display="none";
+}
+function YiFanWang()
+{
+document.getElementById("DongYuhYang").style.display="none";
+document.getElementById("YiFanWang").style.display="";
+document.getElementById("HungLungWang").style.display="none";
+document.getElementById("JouMingChang").style.display="none";
+document.getElementById("ChingShihTsou").style.display="none";
+}
+function HungLungWang()
+{
+document.getElementById("DongYuhYang").style.display="none";
+document.getElementById("YiFanWang").style.display="none";
+document.getElementById("HungLungWang").style.display="";
+document.getElementById("JouMingChang").style.display="none";
+document.getElementById("ChingShihTsou").style.display="none";
+}
+function JouMingChang()
+{
+document.getElementById("DongYuhYang").style.display="none";
+document.getElementById("YiFanWang").style.display="none";
+document.getElementById("HungLungWang").style.display="none";
+document.getElementById("JouMingChang").style.display="";
+document.getElementById("ChingShihTsou").style.display="none";
+}
+function ChingShihTsou()
+{
+document.getElementById("DongYuhYang").style.display="none";
+document.getElementById("YiFanWang").style.display="none";
+document.getElementById("HungLungWang").style.display="none";
+document.getElementById("JouMingChang").style.display="none";
+document.getElementById("ChingShihTsou").style.display="";
+}
+</script>
+
 </body>
 </html>
